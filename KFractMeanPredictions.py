@@ -43,7 +43,7 @@ def k_fract_mean_predict_item(top, data):
         for j in range(top):
             top_similar[i, j] = top_sim_movies.T[j]
 
-    for i in range(n_users):
+    for i in range(data["n_users"]):
         indexes = top_similar[i].astype(np.int)
         numerator = data['item_similarity'][i][indexes]
 
